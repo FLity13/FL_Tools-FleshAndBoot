@@ -1,0 +1,17 @@
+E:\FL-Tools 1.1\bin\Debug\net6.0-windows\FL-Tools 1.1.exe
+E:\FL-Tools 1.1\bin\Debug\net6.0-windows\FL-Tools 1.1.deps.json
+E:\FL-Tools 1.1\bin\Debug\net6.0-windows\FL-Tools 1.1.runtimeconfig.json
+E:\FL-Tools 1.1\bin\Debug\net6.0-windows\FL-Tools 1.1.dll
+E:\FL-Tools 1.1\bin\Debug\net6.0-windows\FL-Tools 1.1.pdb
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.csproj.AssemblyReference.cache
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL_Tools_1._1.Form1.resources
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.csproj.GenerateResource.cache
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.GeneratedMSBuildEditorConfig.editorconfig
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.AssemblyInfoInputs.cache
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.AssemblyInfo.cs
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.csproj.CoreCompileInputs.cache
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.dll
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\refint\FL-Tools 1.1.dll
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.pdb
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\FL-Tools 1.1.genruntimeconfig.cache
+E:\FL-Tools 1.1\obj\Debug\net6.0-windows\ref\FL-Tools 1.1.dll
