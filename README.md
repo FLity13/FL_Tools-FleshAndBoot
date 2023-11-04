@@ -1,4 +1,6 @@
 # FL_Tools-FleshAndBoot
+`##### FOR NORMAL JOB DAWNLOAD VERSION 1.2 FROM RELESES`
+`##### ДЛЯ НОРМАЛЬНОЙ РАБОТЫ СКАЧИВАЙТЕ ВЕРСИЮ 1.2 ИЗ РЕЛИЗА `
 
 `ENGLISH. `
  A Windows program written in `C# Windows Forms`. It has a large set of functions for working with ADB and FastBoot.
