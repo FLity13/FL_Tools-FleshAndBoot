@@ -41,31 +41,35 @@ namespace FL_Tools_1._1
                 }
             }
 
-            public static void FastbootFile(string Argument, string FileName)
+            public static void FastbootFile(string Argument)
             {
-                if (MessageBox.Show("You may damage your device. You take responsibility only for yourself. Continue?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                OpenFileDialog OPF = new OpenFileDialog();
+                if (OPF.ShowDialog() == DialogResult.OK)
                 {
-                    string fastbootPath = @"platform-tools\fastboot.exe";
-
-                    ProcessStartInfo startInfo = new ProcessStartInfo(fastbootPath);
-                    startInfo.Arguments = $"{Argument} {FileName}";
-                    startInfo.WorkingDirectory = System.IO.Path.GetDirectoryName(fastbootPath);
-                    startInfo.RedirectStandardOutput = true;
-                    startInfo.RedirectStandardError = true;
-                    startInfo.UseShellExecute = false;
-                    startInfo.CreateNoWindow = true;
-
-                    using (Process process = new Process())
+                    if (MessageBox.Show("You may damage your device. You take responsibility only for yourself. Continue?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        process.StartInfo = startInfo;
-                        process.OutputDataReceived += (sender, e) => Console.WriteLine(e.Data);
-                        process.ErrorDataReceived += (sender, e) => Console.WriteLine(e.Data);
+                        string fastbootPath = @"platform-tools\fastboot.exe";
 
-                        process.Start();
-                        process.BeginOutputReadLine();
-                        process.BeginErrorReadLine();
+                        ProcessStartInfo startInfo = new ProcessStartInfo(fastbootPath);
+                        startInfo.Arguments = $"{Argument} {OPF.FileName}";
+                        startInfo.WorkingDirectory = System.IO.Path.GetDirectoryName(fastbootPath);
+                        startInfo.RedirectStandardOutput = true;
+                        startInfo.RedirectStandardError = true;
+                        startInfo.UseShellExecute = false;
+                        startInfo.CreateNoWindow = true;
 
-                        process.WaitForExit();
+                        using (Process process = new Process())
+                        {
+                            process.StartInfo = startInfo;
+                            process.OutputDataReceived += (sender, e) => Console.WriteLine(e.Data);
+                            process.ErrorDataReceived += (sender, e) => Console.WriteLine(e.Data);
+
+                            process.Start();
+                            process.BeginOutputReadLine();
+                            process.BeginErrorReadLine();
+
+                            process.WaitForExit();
+                        }
                     }
                 }
             }
@@ -177,82 +181,69 @@ namespace FL_Tools_1._1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Name = CommadsHelper.GetFile();
-            if (Name != "")
-            {
                 if (CommadsHelper.FastbootChecker())
                 {
-                    CommadsHelper.FastbootFile("flesh recovery", Name);
+                    CommadsHelper.FastbootFile("flash recovery");
                 }
                 else
                 {
                     MessageBox.Show("Phone is disconnect of FastBoot. Try again...");
                 }
-            }
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Name = CommadsHelper.GetFile();
-            if (Name != "")
-            {
                 if (CommadsHelper.FastbootChecker())
                 {
-                    CommadsHelper.FastbootFile("flesh boot", Name);
+                    CommadsHelper.FastbootFile("flash boot");
                 }
                 else
                 {
                     MessageBox.Show("Phone is disconnect of FastBoot. Try again...");
                 }
-            }
+
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Name = CommadsHelper.GetFile();
-            if (Name != "")
-            {
+
                 if (CommadsHelper.FastbootChecker())
                 {
-                    CommadsHelper.FastbootFile("--disable-verity --disable-verification flash vbmeta", Name);
+                    CommadsHelper.FastbootFile("--disable-verity --disable-verification flash vbmeta");
                 }
                 else
                 {
                     MessageBox.Show("Phone is disconnect of FastBoot. Try again...");
                 }
-            }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Name = CommadsHelper.GetFile();
-            if (Name != "")
-            {
+
                 if (CommadsHelper.FastbootChecker())
                 {
-                    CommadsHelper.FastbootFile("boot", Name);
+                    CommadsHelper.FastbootFile("boot");
                 }
                 else
                 {
                     MessageBox.Show("Phone is disconnect of FastBoot. Try again...");
                 }
-            }
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Name = CommadsHelper.GetFile();
-            if (Name != "")
-            {
                 if (CommadsHelper.FastbootChecker())
                 {
-                    CommadsHelper.FastbootFile("update", Name);
+                    CommadsHelper.FastbootFile("update");
                 }
                 else
                 {
                     MessageBox.Show("Phone is disconnect of FastBoot. Try again...");
                 }
-            }
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
